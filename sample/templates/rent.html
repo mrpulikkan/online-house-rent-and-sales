@@ -1,0 +1,42 @@
+{% extends 'main.html' %}
+{% load static %}
+{% block content %}
+{% include 'navbar.html' %}
+
+<div id="showcase">
+   
+</div>
+<hr>
+<div class="small-container">
+    <div class="row row-2">
+        <h2>All Products</h2>
+        <select name="" id="">
+            <option value="">-select one-</option>
+            <option value="">Rent</option>
+            <option value="">Sale</option>
+            <option value="">Other</option>
+        </select>
+    </div>
+    <div class="row">
+        {% for i in products %}
+
+        <div class="col-4">
+            <img src="{% static 'images/house.jpg'%}" alt=""/>
+            <h3> {{i.name}}  <br> Rs. {{i.price}}  </h3>
+           
+            <p>{{i.place}}</p>
+        </div>
+        {% endfor%}       
+               
+    </div>
+
+    <div class="page-btn">
+        <span>1</span>
+        <span>2</span>
+        <span>3</span>
+        <span>4</span>
+        <span>&#8594;</span>
+    </div>
+    
+</div>
+{% endblock  %}

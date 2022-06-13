@@ -1,0 +1,19 @@
+{% load static %}
+
+<html>
+    <head>
+        <link rel="stylesheet" href="{% static 'css/style.css'%}"
+    </head>
+    <body>
+        <nav>
+            <ul>
+                <li><img src="{% static 'images/logo.jpg'%}"  height="49px" width="100px" >
+                <li><a href="{% url 'index'%}"> HOME</a></li>
+                <li><a href=#> ABOUT</a></li>
+                <li><a href="{% url 'rent'%}"> RENT</a></li>
+                <li><a href="{% url 'sale'%}"> SALES</a></li>
+            </ul>   
+        </nav> 
+        <br><br>
+    </body>
+</html>
